@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Order Date</th>
+                        <th>Car</th>
+                        <th>Delivery Mode</th>
+                        <th>Delivery Date</th>
+                        <th>Delivery Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of length">
+                        <td>{{orders[i]._id}}</td>
+                        <td>{{orders[i].orderdate}}</td>
+                        <td>{{cars[i].brand}} {{cars[i].model}}</td>
+                        <td>{{orders[i].deliverymode}}</td>
+                        <td>{{orders[i].deliverydate}}</td>
+                        <td><a class="btn btn-primary" routerLink="/orders/{{orders[i]._id}}">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

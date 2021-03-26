@@ -1,0 +1,32 @@
+<form (ngSubmit)="submit()">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 row justify-content-center">
+                <div class="col-md-5">
+                    <img src="{{car.img}}" alt="" width="100%">
+                </div>
+                <div class="col-md-3 row align-items-center">
+                    <p class="sub-heading"><b>Model:</b> {{car.model}}</p>
+                    <p class="sub-heading"><b>Brand:</b> {{car.brand}}</p>
+                    <p class="sub-heading"><b>Year:</b> {{car.year}}</p>
+                    <p class="sub-heading"><b>Price:</b> ${{car.price}}</p>
+                </div>
+                <div class="col-md-9 row justify-content-center">
+                    <div class="margin-top">
+                        <label class="sub-heading" for="deliverymode"><b>Please select mode of delivery:</b></label>
+                        <select class="form-control" name="deliverymode" [(ngModel)]="order.deliverymode">
+                            <option value="Pick Up By Self">Pick Up By Self</option>
+                            <option value="Doorstep Delivery">Doorstep Delivery</option>
+                        </select>
+                    </div>
+                    <div class="margin-top">
+                        <label class="sub-heading" for="deliverymode"><b>Please select a date for delivery:</b></label>
+                        <input class="form-control" type="date" name="deliverydate" placeholder="Delivery date"
+                            [(ngModel)]="order.deliverydate" min="{{current_date}}" required>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

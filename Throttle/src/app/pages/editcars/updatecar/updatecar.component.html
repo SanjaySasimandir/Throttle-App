@@ -1,0 +1,18 @@
+<hr>
+<form action="" (ngSubmit)="submit()">
+    <div class="form-group">
+        <input type="text" class="form-control" name="model" placeholder="model" [(ngModel)]="car.model"><br>
+        <input type="text" class="form-control" name="brand" placeholder="brand" [(ngModel)]="car.brand"><br>
+        <input type="year" class="form-control" name="year" placeholder="year" [(ngModel)]="car.year"><br>
+        <input type="number" class="form-control" name="price" placeholder="price" [(ngModel)]="car.price"><br>
+        <input type="url" class="form-control" name="img" placeholder="image" [(ngModel)]="car.img"><br>
+        <!-- <input type="file" name="img" accept="images/*"><br> -->
+        <input type="text" class="form-control" name="transmission" placeholder="transmission"
+            [(ngModel)]="car.transmission"><br>
+        <input type="number" class="form-control" name="horsepower" placeholder="horsepower"
+            [(ngModel)]="car.horsepower"><br>
+        <input type="text" class="form-control" name="description" placeholder="description"
+            [(ngModel)]="car.description"><br>
+        <button type="submit">Update Car</button>
+    </div>
+</form>

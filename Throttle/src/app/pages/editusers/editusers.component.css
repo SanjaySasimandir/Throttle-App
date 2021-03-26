@@ -1,0 +1,12 @@
+th{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+td{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+.container{
+    margin-top: 2rem
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h4 class="sub-heading"><b>Order Id:</b> {{order._id}}</h4>
+        <h6 class="sub-heading"><b>Order Status:</b> {{order.status}}</h6>
+        <h6 class="sub-heading"><b>Order Delivery Mode:</b> {{order.deliverymode}}</h6>
+        <h6 class="sub-heading"><b>Order Delivery Date:</b> {{order.deliverydate}}</h6>
+        <a class="btn btn-primary" routerLink="/orders/process/{{order._id}}">Process</a>
+        <hr>
+        <div class="col-md-9 row justify-content-center">
+            <div class="col-md-6">
+                <h5 class="sub-heading"><b>Car Info</b></h5>
+                <p class="sub-heading"><b>Car:</b> {{car.year}} {{car.brand}} {{car.model}}</p>
+                <p class="sub-heading"><b>Price:</b> {{car.price}}</p>
+
+            </div>
+            <div class="col-md-6">
+                <h5 class="sub-heading"><b>Customer Info</b></h5>
+                <p class="sub-heading"><b>Customer Name:</b> {{customer.firstName}} {{customer.lastName}}</p>
+                <p class="sub-heading"><b>Customer Phone:</b> {{customer.phone}}</p>
+                <p class="sub-heading"><b>Customer Address:</b> {{customer.address}}</p>
+            </div>
+        </div>
+    </div>
+</div>

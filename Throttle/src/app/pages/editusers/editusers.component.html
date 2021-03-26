@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user._id}}</td>
+                        <td>{{user.firstName}} {{user.lastName}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.email}}</td>
+                        <td><a class="btn btn-primary" routerLink="/editusers/{{user._id}}">Change Role</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

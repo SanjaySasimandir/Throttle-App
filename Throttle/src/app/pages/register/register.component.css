@@ -1,0 +1,20 @@
+h2 {
+    text-align: center;
+}
+
+h4 {
+    color: #d64444;
+}
+
+label {
+    margin-top: 0.5rem;
+}
+
+button {
+    width: 6rem;
+    margin-top: 0.5rem;
+}
+
+.container {
+    margin-top: 3rem;
+}

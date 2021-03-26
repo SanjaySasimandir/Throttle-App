@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-5 row justify-content-center" *ngFor="let car of carlist">
+            <a routerLink="{{car._id}}" class="card-img"
+                style="background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('{{car.img}}')">
+                <div class="card-style">
+                    <p class="content-text">$ {{car.price}}</p>
+                    <h1 class="heading">{{car.year}} {{car.brand}} {{car.model}}</h1>
+                    <div *ngIf="userService.loggedIn()">
+                        <a class="btn btn-primary" *ngIf="userService.adminloggedIn()" routerLink="/editcar/{{car._id}}">Edit</a>&nbsp;
+                        <a class="btn btn-danger" *ngIf="userService.adminloggedIn()" routerLink="/deletecar/{{car._id}}">Delete</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

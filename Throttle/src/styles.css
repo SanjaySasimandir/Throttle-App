@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: #fafafa; */
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.sub-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.content-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
