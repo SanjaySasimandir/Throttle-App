@@ -8,11 +8,11 @@
         <ul class="d-flex align-items-end navbar-nav ml-lg-auto jump">
             <li class="nav-item"><a class="nav-link" routerLink="">Home</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="/browse">Browse</a></li>
-            <li class="nav-item"><a class="nav-link"*ngIf="userService.customerloggedIn() || userService.adminloggedIn()" routerLink="/bookservice">Book Service</a></li>
+            <!-- <li class="nav-item"><a class="nav-link"*ngIf="userService.customerloggedIn() || userService.adminloggedIn()" routerLink="/bookservice">Book Service</a></li> -->
             <li class="nav-item"><a class="nav-link" *ngIf="userService.customerloggedIn()" routerLink="/myorders">My Orders</a></li>
             <li class="nav-item"><a class="nav-link" *ngIf="userService.employeeloggedIn()|| userService.adminloggedIn()" routerLink="/orders">All Orders</a></li>
-            <li class="nav-item"><a class="nav-link" *ngIf="userService.customerloggedIn()" routerLink="/viewmybookings">My Bookings</a></li>
-            <li class="nav-item"><a class="nav-link" *ngIf="userService.employeeloggedIn()|| userService.adminloggedIn()" routerLink="/viewallbookings">All Bookings</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" *ngIf="userService.customerloggedIn()" routerLink="/viewmybookings">My Bookings</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" *ngIf="userService.employeeloggedIn()|| userService.adminloggedIn()" routerLink="/viewallbookings">All Bookings</a></li> -->
             <li class="nav-item"><a class="nav-link" *ngIf="userService.adminloggedIn()" routerLink="/addcar">Add Car</a></li>
             <li class="nav-item"><a class="nav-link" *ngIf="userService.adminloggedIn()" routerLink="/editusers">Edit Roles</a></li>
             <li class="nav-item"><a class="nav-link" *ngIf="!userService.loggedIn()" routerLink="/login">Login</a></li>
