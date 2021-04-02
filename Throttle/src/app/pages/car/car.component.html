@@ -5,9 +5,9 @@
                 style="background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2) ), url('{{car.img}}')">
                 <div class="card-style">
                     <h1 class="heading">{{car.year}} {{car.brand}} {{car.model}}</h1>
-                    <div *ngIf="userService.loggedIn()">
-                        <a class="btn btn-primary" *ngIf="userService.adminloggedIn()" routerLink="/editcar/{{car._id}}">Edit</a>&nbsp;
-                        <a class="btn btn-danger" *ngIf="userService.adminloggedIn()" routerLink="/deletecar/{{car._id}}">Delete</a>
+                    <div *ngIf="userService.adminloggedIn()">
+                        <a class="btn btn-primary" routerLink="/editcar/{{car._id}}">Edit</a>&nbsp;
+                        <a class="btn btn-danger" routerLink="/deletecar/{{car._id}}">Delete</a>
                     </div>
                 </div>
             </div>
@@ -15,14 +15,16 @@
     </div>
     <div class="row justify-content-center info">
         <div class="col-md-10 row justify-content-center">
-            <a class="btn btn-primary" *ngIf="userService.customerloggedIn()" routerLink="/order/{{car._id}}">Buy</a>
+            <div class="col-md-12 row justify-content-center">
+                <a class="btn btn-primary" *ngIf="userService.customerloggedIn()" routerLink="/order/{{car._id}}">Order this car for ${{car.price}}</a>
+            </div>
             <div class="col-md-6 margin-top">
                 <p class="sub-heading"><b>Model: </b>{{car.model}}</p>
                 <p class="sub-heading"><b>Make: </b>{{car.brand}}</p>
                 <p class="sub-heading"><b>Year: </b>{{car.year}}</p>
             </div>
             <div class="col-md-6 margin-top">
-                <p class="sub-heading"><b>Price: </b>{{car.price}}</p>
+                <p class="sub-heading"><b>Price: </b>${{car.price}}</p>
                 <p class="sub-heading"><b>Transmission: </b>{{car.transmission}}</p>
                 <p class="sub-heading"><b>Horsepower: </b>{{car.horsepower}}</p>
             </div>

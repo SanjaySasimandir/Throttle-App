@@ -1,0 +1,19 @@
+a, button {
+    width: max-content;
+    border-radius: 2rem;
+    margin: 1rem;
+    font-weight: 400;
+}
+
+p {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+}
+
+.col-md-5 {
+    margin-top: 30vh;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59) 1 100%;
+}

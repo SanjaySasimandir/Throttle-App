@@ -32,7 +32,7 @@ CarsRouter.post('/deletecar', function (req, res) {
     var id = req.body.carId;
     console.log(id);
     CarsData.findByIdAndDelete({ _id: id }).then(function (message) {
-        console.log(message);
+        res.send({ "message": "success" });
     })
     res.status(200);
 });
@@ -41,8 +41,11 @@ CarsRouter.post('/updatecar', function (req, res) {
 
     var car = req.body.car;
     var id = car._id;
-    CarsData.findByIdAndUpdate({ _id: id }, car, function (err, res) {
-        if (err) console.log(err);
+    CarsData.findByIdAndUpdate({ _id: id }, car, function (err, result) {
+        if (err) console.log(err)
+        else {
+            res.send({ "message": "success" });
+        }
     });
 })
 

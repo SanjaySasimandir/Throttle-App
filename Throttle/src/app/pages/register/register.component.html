@@ -14,7 +14,7 @@
                     <input type="email" class="form-control" name="email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
                         required placeholder="Email" [(ngModel)]="user.email"></label>
                 <label for="password">Password:
-                    <input type="password" class="form-control" name="password" required placeholder="Password"
+                    <input type="password" class="form-control" name="password" minlength="6" required placeholder="Password"
                         [(ngModel)]="user.password"></label>
                 <label for="confirmpassword">Confirm Password:
                     <input type="password" class="form-control" name="confirmpassword" required placeholder="Password"

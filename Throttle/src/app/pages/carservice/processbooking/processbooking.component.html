@@ -1,0 +1,65 @@
+<div class="container">
+    <form (ngSubmit)="submit()">
+        <div class="row justify-content-center">
+            <div class="col-md-5 row justify-content-center">
+                <p class="sub-heading" *ngIf="booking.pickupmode=='Collect the car from my residential address'">
+                    <b>Pickup Mode: </b>Collect car from customer's residence
+                </p>
+                <p class="sub-heading" *ngIf="booking.pickupmode!='Collect the car from my residential address'">
+                    <b>Pickup Mode: </b>Customer will drop the car off
+                </p>
+                <p class="sub-heading" *ngIf="booking.deliverymode=='Deliver the car to my residential address'">
+                    <b>Delivery Mode: </b>Deliver to customer's residence
+                </p>
+                <p class="sub-heading" *ngIf="booking.deliverymode!='Deliver the car to my residential address'">
+                    <b>Delivery Mode: </b>Customer will collect the car
+                </p>
+                <p class="sub-heading"><b>Current status of booking is:</b> {{booking.status}}</p>
+                <hr>
+
+                <p class="sub-heading"><b>Select new status of the booking:</b></p>
+                <div><label class="sub-heading" for="status1"><input type="radio" id="status1" name="Status"
+                            [(ngModel)]="newstatus" value="Processing"> Processing</label><br></div>
+
+                <div *ngIf="booking.pickupmode=='Collect the car from my residential address'"><label
+                        class="sub-heading" for="status7"><input id="status7" type="radio" name="Status"
+                            [(ngModel)]="newstatus" value="About to be Picked up">
+                        About to be Picked up</label><br>
+                </div>
+                <div *ngIf="booking.pickupmode!='Collect the car from my residential address'"><label
+                        class="sub-heading" for="status8"><input id="status8" type="radio" name="Status"
+                            [(ngModel)]="newstatus" value="Please deliver the car to us">
+                        Ready to be Delivered for service</label><br>
+                </div>
+
+                <div><label class="sub-heading" for="status2"><input type="radio" id="status2" name="Status"
+                            [(ngModel)]="newstatus" value="Currently being worked on"> Currently being worked
+                        on</label><br></div>
+
+                <div *ngIf="booking.deliverymode=='Deliver the car to my residential address'"><label
+                        class="sub-heading" for="status3"><input id="status3" type="radio" name="Status"
+                            [(ngModel)]="newstatus" value="Finished and Ready to be Delivered to you">
+                        Ready to be Delivered to customer</label><br>
+                </div>
+
+                <div *ngIf="booking.deliverymode=='I will collect the car myself'"><label class="sub-heading"
+                        for="status4"><input id="status4" type="radio" name="Status" [(ngModel)]="newstatus"
+                            value="Finished and Waiting for you to collect the car">
+                        Ready to get Picked up by Customer</label><br>
+                </div>
+
+                <div><label class="sub-heading" for="status5"><input id="status5" type="radio" name="Status"
+                            [(ngModel)]="newstatus" value="Completed"> Completed</label><br></div>
+                <br>
+                <hr>
+                <label class="sub-heading" for="deliverydate"><b>Car will be ready after service on:</b><input
+                        class="form-control" type="date" name="deliverydate" placeholder="Delivery date"
+                        [(ngModel)]="booking.deliverydate" min="{{current_date}}" required></label>
+
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -14,7 +14,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class VieworderComponent implements OnInit {
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private userService: UserService, private carService: CarService, private orderService: OrderService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public userService: UserService, private carService: CarService, private orderService: OrderService) { }
 
   orderid;
   order= new OrdersModel(null,null,null, null, null, null, null,null);

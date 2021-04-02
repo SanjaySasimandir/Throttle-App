@@ -11,10 +11,15 @@ OrdersRouter.post('/addorder', function (req, res) {
     var order = OrdersData(req.body.order);
     var date = new Date();
     RegistrationData.find({ _id: order.customerid }).then(data => {
-        order.orderdate = `${date.toDateString()}`;
-        order.ordertime = String(date.toTimeString());
-        order.save();
-        res.send({ "message": "success" })
+        if (data[0]) {
+            order.orderdate = `${date.toDateString()}`;
+            order.ordertime = String(date.toTimeString());
+            order.save();
+            res.send({ "message": "success" })
+        }
+        else{
+            res.send({ "message": "fail" })
+        }
     });
 
 });

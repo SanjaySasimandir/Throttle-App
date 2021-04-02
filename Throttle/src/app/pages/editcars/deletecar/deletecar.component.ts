@@ -17,8 +17,11 @@ export class DeletecarComponent implements OnInit {
 
   delete() {
     console.log('delete');
-    this.carService.deletecar(this.carId);
-    this.router.navigate(['/browse'],);
+    this.carService.deletecar(this.carId).subscribe(status => {
+      if (status.message == "success") {
+        this.router.navigate(['/browse'],);
+      }
+    });
   };
 
   ngOnInit(): void {

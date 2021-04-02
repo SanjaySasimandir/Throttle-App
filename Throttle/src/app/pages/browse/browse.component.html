@@ -6,9 +6,9 @@
                 <div class="card-style">
                     <p class="content-text">$ {{car.price}}</p>
                     <h1 class="heading">{{car.year}} {{car.brand}} {{car.model}}</h1>
-                    <div *ngIf="userService.loggedIn()">
-                        <a class="btn btn-primary" *ngIf="userService.adminloggedIn()" routerLink="/editcar/{{car._id}}">Edit</a>&nbsp;
-                        <a class="btn btn-danger" *ngIf="userService.adminloggedIn()" routerLink="/deletecar/{{car._id}}">Delete</a>
+                    <div *ngIf="userService.adminloggedIn()">
+                        <a class="btn btn-primary" routerLink="/editcar/{{car._id}}">Edit</a>&nbsp;
+                        <a class="btn btn-danger" routerLink="/deletecar/{{car._id}}">Delete</a>
                     </div>
                 </div>
             </a>

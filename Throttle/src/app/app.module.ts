@@ -11,9 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowseComponent } from './pages/browse/browse.component';
-import { BookserviceComponent } from './pages/bookservice/bookservice.component';
-import { AddcarsComponent } from './pages/addcars/addcars.component';
-import { EditcarsComponent } from './pages/editcars/editcars.component';
+import { BookserviceComponent } from './pages/carservice/bookservice/bookservice.component';
 import { AddcarComponent } from './pages/editcars/addcar/addcar.component';
 import { UpdatecarComponent } from './pages/editcars/updatecar/updatecar.component';
 import { CarComponent } from './pages/car/car.component';
@@ -31,6 +29,8 @@ import { CarService } from './services/car.service';
 import { OrderService } from './services/order.service';
 import { EditusersComponent } from './pages/editusers/editusers.component';
 import { EdituserComponent } from './pages/edituser/edituser.component';
+import { BookingService } from './services/booking.service';
+import { ProcessbookingComponent } from './pages/carservice/processbooking/processbooking.component';
 
 @NgModule({
   declarations: [
@@ -42,8 +42,6 @@ import { EdituserComponent } from './pages/edituser/edituser.component';
     HomeComponent,
     BrowseComponent,
     BookserviceComponent,
-    AddcarsComponent,
-    EditcarsComponent,
     AddcarComponent,
     UpdatecarComponent,
     CarComponent,
@@ -57,7 +55,8 @@ import { EdituserComponent } from './pages/edituser/edituser.component';
     ViewallbookingsComponent,
     ViewbookingComponent,
     EditusersComponent,
-    EdituserComponent
+    EdituserComponent,
+    ProcessbookingComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +65,7 @@ import { EdituserComponent } from './pages/edituser/edituser.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService, CarService, OrderService],
+  providers: [UserService, CarService, OrderService, BookingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

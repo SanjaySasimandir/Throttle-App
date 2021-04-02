@@ -1,1 +1,28 @@
-<p>viewmybooking works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Order Date</th>
+                        <th>Car</th>
+                        <th>PickUp Mode</th>
+                        <th>Delivery Mode</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let booking of bookings">
+                        <td>{{booking._id}}</td>
+                        <td>{{booking.orderdate}}</td>
+                        <td>{{booking.carmake}} {{booking.carmodel}}</td>
+                        <td>{{booking.pickupmode}}</td>
+                        <td>{{booking.deliverymode}}</td>
+                        <td>{{booking.status}}</td>
+                        <td><a class="btn btn-primary" routerLink="/bookings/{{booking._id}}">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -25,12 +25,12 @@ export class CarService {
 
   // Delete a car
   deletecar(id) {
-    return this.http.post<any>('http://localhost:7000/cars/deletecar', { "carId": id }).subscribe(message => { });
+    return this.http.post<any>('http://localhost:7000/cars/deletecar', { "carId": id });
   };
 
   // Update a car
   updatecar(car: any) {
-    return this.http.post<any>('http://localhost:7000/cars/updatecar', { "car": car }).subscribe(message => { });
+    return this.http.post<any>('http://localhost:7000/cars/updatecar', { "car": car });
   }
 
 }

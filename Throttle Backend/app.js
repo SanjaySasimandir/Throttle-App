@@ -21,6 +21,9 @@ app.use('/users', UserRouter);
 const OrdersRouter = require('./src/routes/OrdersRouter');
 app.use('/orders', OrdersRouter);
 
+const ServiceRouter = require('./src/routes/ServiceRouter');
+app.use('/bookings', ServiceRouter);
+
 app.get('/test', function (req, res) {
     res.send('yes');
 });

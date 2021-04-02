@@ -3,17 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminGuard } from './guards/admin.guard';
 import { CustomerGuard } from './guards/customer.guard';
 import { EmployeeadminGuard } from './guards/employeeadmin.guard';
-import { AddcarsComponent } from './pages/addcars/addcars.component';
-// import { BookserviceComponent } from './pages/bookservice/bookservice.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { CarComponent } from './pages/car/car.component';
 import { BookserviceComponent } from './pages/carservice/bookservice/bookservice.component';
+import { ProcessbookingComponent } from './pages/carservice/processbooking/processbooking.component';
 import { ViewallbookingsComponent } from './pages/carservice/viewallbookings/viewallbookings.component';
 import { ViewbookingComponent } from './pages/carservice/viewbooking/viewbooking.component';
 import { ViewmybookingComponent } from './pages/carservice/viewmybooking/viewmybooking.component';
 import { AddcarComponent } from './pages/editcars/addcar/addcar.component';
 import { DeletecarComponent } from './pages/editcars/deletecar/deletecar.component';
-import { EditcarsComponent } from './pages/editcars/editcars.component';
 import { UpdatecarComponent } from './pages/editcars/updatecar/updatecar.component';
 import { EdituserComponent } from './pages/edituser/edituser.component';
 import { EditusersComponent } from './pages/editusers/editusers.component';
@@ -39,11 +37,12 @@ const routes: Routes = [
   { path: "myorders", canActivate: [CustomerGuard], component: ViewmyordersComponent },
   { path: "orders", canActivate: [EmployeeadminGuard], component: ViewallordersComponent },
   { path: "orders/process/:id", canActivate: [EmployeeadminGuard], component: ProcessorderComponent },
-  { path: "orders/:id", canActivate: [EmployeeadminGuard, CustomerGuard], component: VieworderComponent },
+  { path: "orders/:id", component: VieworderComponent },
   { path: "bookservice", canActivate: [CustomerGuard], component: BookserviceComponent },
   { path: "viewmybookings", canActivate: [CustomerGuard], component: ViewmybookingComponent },
   { path: "viewallbookings", canActivate: [EmployeeadminGuard], component: ViewallbookingsComponent },
-  { path: "bookings/:id", canActivate: [EmployeeadminGuard], component: ViewbookingComponent },
+  { path: "bookings/:id", component: ViewbookingComponent },
+  { path: "bookings/process/:id", canActivate: [EmployeeadminGuard], component: ProcessbookingComponent },
   { path: "editusers", canActivate: [EmployeeadminGuard], component: EditusersComponent },
   { path: "editusers/:id", canActivate: [EmployeeadminGuard], component: EdituserComponent }
 ];

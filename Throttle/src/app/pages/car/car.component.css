@@ -41,3 +41,15 @@ img {
 .margin-top {
     margin-top: 4rem
 }
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    width: max-content !important;
+    border-radius: 2rem !important;
+    margin: 1rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400 !important;
+}

@@ -16,7 +16,12 @@ export class UpdatecarComponent implements OnInit {
   carId;
   submit() {
     console.log(this.car);
-    this.carService.updatecar(this.car);
+    this.carService.updatecar(this.car).subscribe(status => {
+      if (status.message == "success") {
+        this.router.navigate(['/browse']);
+        window.history.back();
+      }
+    });
   }
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(id => this.carId = id.id);

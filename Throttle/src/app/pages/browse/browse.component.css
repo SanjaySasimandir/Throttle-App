@@ -19,10 +19,6 @@ img {
     background-position: center !important;
 }
 
-.card-img :hover {
-    background-size: 100%;
-}
-
 .col-md-5 {
     margin-right: 1rem;
     margin-left: 1rem;
