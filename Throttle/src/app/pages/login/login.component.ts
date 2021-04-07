@@ -21,10 +21,12 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       }
       else if (status.message == "Wrong Password") {
-        this.displayMessage = "Wrong Password";
+        this.displayMessage = "Wrong Password!";
+        this.divIsVisible = true;
       }
       else if (status.message == "Wrong email") {
-        this.displayMessage = "Invalid email";
+        this.displayMessage = "Invalid email!";
+        this.divIsVisible = true;
       }
     })
   }
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
     email: "",
     password: ""
   };
+  divIsVisible = false;
 
   displayMessage = "";
 

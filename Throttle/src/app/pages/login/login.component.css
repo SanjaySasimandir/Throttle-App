@@ -17,3 +17,15 @@ button {
     border-style: solid;
     border-image: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59) 1 100%;
 }
+
+.sub-heading {
+    margin-top: 0.75rem;
+}
+
+label {
+    font-weight: 400;
+}
+
+label input {
+    font-weight: 300;
+}

@@ -5,13 +5,9 @@ html {
 }
 
 body {
-    /* background-color: #fafafa; */
     background: #D3CCE3;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E9E4F0, #D3CCE3);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .heading {
@@ -36,7 +32,13 @@ body {
 button {
     font-family: 'Poppins', sans-serif;
     width: max-content !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
     border-radius: 2rem !important;
     margin: 1rem;
     font-weight: 400 !important;
+}
+
+.form-control, input {
+    border-radius: 1.5rem;
 }

@@ -1,12 +1,12 @@
 <div class="container margin-top">
     <div class="row justify-content-center">
-        <h4 class="sub-heading"><b>Order Id:</b> {{order._id}}</h4>
-        <h6 class="sub-heading"><b>Order Status:</b> {{order.status}}</h6>
-        <h6 class="sub-heading"><b>Order Delivery Mode:</b> {{order.deliverymode}}</h6>
-        <h6 class="sub-heading"><b>Order Delivery Date:</b> {{order.deliverydate}}</h6>
+        <h4 class="sub-heading col-12"><b>Order Id:</b> {{order._id}}</h4>
+        <h6 class="sub-heading col-12"><b>Order Status:</b> {{order.status}}</h6>
+        <h6 class="sub-heading col-12"><b>Order Delivery Mode:</b> {{order.deliverymode}}</h6>
+        <h6 class="sub-heading col-12"><b>Order Delivery Date:</b> {{order.deliverydate}}</h6>
         <a class="btn btn-primary" *ngIf="userService.adminloggedIn() || userService.employeeloggedIn()"
             routerLink="/orders/process/{{order._id}}">Process</a>
-        <hr>
+        <hr class="col-12">
         <div class="col-md-9 row justify-content-center">
             <div class="col-md-6 car-tab">
                 <h5 class="sub-heading"><b>Car Info</b></h5>

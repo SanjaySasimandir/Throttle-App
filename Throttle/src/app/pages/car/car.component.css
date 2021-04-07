@@ -1,5 +1,9 @@
 * {}
 
+.heading{
+    text-shadow: 2px 2px 50px #000000;
+}
+
 img {
     filter: blur(50);
     /* opacity: 20%; */

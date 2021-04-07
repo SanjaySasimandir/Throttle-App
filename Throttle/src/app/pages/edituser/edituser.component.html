@@ -2,20 +2,25 @@
     <form (ngSubmit)="submit()">
         <div class="row justify-content-center">
             <div class="col-md-5 row justify-content-center">
-                <p class="sub-heading"><b>Current role of user is:</b> {{currentrole}}</p>
-                <hr>
+                <p class="sub-heading col-12"><b>Name of user:</b> {{user.firstName}} {{user.lastName}}</p>
+                <p class="sub-heading col-12"><b>Current role of user is:</b> {{currentrole}}</p>
+                <div>
+                    <hr>
+                </div>
 
-                <p class="sub-heading"><b>Select new role of user:</b></p>
-                <div><label class="sub-heading" for="role1"><input type="radio" id="role1" name="role"
-                            [(ngModel)]="user.role" value="Customer"> Customer</label><br></div>
+                <p class="sub-heading col-12"><b>Select new role of user:</b></p>
+                <div class="col-12 justify-content-center">
+                    <label class="sub-heading" for="role1"><input type="radio" id="role1" name="role"
+                            [(ngModel)]="user.role" value="Customer"> Customer</label><br>
 
-                <div><label class="sub-heading" for="role2"><input type="radio" id="role2" name="role"
-                            [(ngModel)]="user.role" value="Employee"> Employee</label><br></div>
+                    <label class="sub-heading" for="role2"><input type="radio" id="role2" name="role"
+                            [(ngModel)]="user.role" value="Employee"> Employee</label><br>
 
-                <div><label class="sub-heading" for="role3"><input type="radio" id="role3" name="role"
-                            [(ngModel)]="user.role" value="Admin"> Admin</label><br></div>
+                    <label class="sub-heading" for="role3"><input type="radio" id="role3" name="role"
+                            [(ngModel)]="user.role" value="Admin"> Admin</label><br>
+                </div>
 
-                <div class="col-md-3">
+                <div class="col-12 row justify-content-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>

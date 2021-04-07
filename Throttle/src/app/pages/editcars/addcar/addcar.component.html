@@ -4,22 +4,22 @@
             <h2 class="sub-heading text-center">Add Car</h2>
             <form (ngSubmit)="submit()">
                 <div class="row form-group justify-content-center">
-                    <label for="model">Model:<input type="text" class="form-control" name="model" required
+                    <label class="sub-heading col-md-6" for="model">Model:<input type="text" class="form-control" name="model" required
                             placeholder="Model" [(ngModel)]="newCar.model"></label>
-                    <label for="brand">Brand:<input type="text" class="form-control" name="brand" required
+                    <label class="sub-heading col-md-6" for="brand">Brand:<input type="text" class="form-control" name="brand" required
                             placeholder="Brand" [(ngModel)]="newCar.brand"></label>
-                    <label for="year">Year:<input type="year" class="form-control" name="year" required
+                    <label class="sub-heading col-md-6" for="year">Year:<input type="year" class="form-control" name="year" required
                             placeholder="Year" [(ngModel)]="newCar.year"></label>
-                    <label for="price">Price:<input type="number" class="form-control" name="price" required
+                    <label class="sub-heading col-md-6" for="price">Price(in $):<input type="number" class="form-control" name="price" required
                             placeholder="Price" [(ngModel)]="newCar.price"></label>
-                    <label for="img">Image URL:<input type="text" class="form-control" name="img" required
+                    <label class="sub-heading col-12" for="img">Image URL:<input type="text" class="form-control" name="img" required
                             placeholder="Image" [(ngModel)]="newCar.img"></label>
-                    <label for="transmission">Transmission:<input type="text" class="form-control" name="transmission"
+                    <label class="sub-heading col-md-6" for="transmission">Transmission:<input type="text" class="form-control" name="transmission"
                             required placeholder="Transmission" [(ngModel)]="newCar.transmission"></label>
-                    <label for="horsepower">Horsepower:<input type="number" class="form-control" name="horsepower"
+                    <label class="sub-heading col-md-6" for="horsepower">Horsepower:<input type="number" class="form-control" name="horsepower"
                             required placeholder="Horsepower" [(ngModel)]="newCar.horsepower"></label>
-                    <label for="description">Description:<textarea class="form-control" name="description" cols="30"
-                            rows="10" placeholder="Description" required [(ngModel)]="newCar.description"></textarea></label>
+                    <label class="sub-heading col-12" for="description">Description:<textarea class="form-control" name="description" cols="30"
+                            rows="5" placeholder="Description" required [(ngModel)]="newCar.description"></textarea></label>
 
                     <button class="btn btn-primary content-text" type="submit">Add Car</button>
                 </div>

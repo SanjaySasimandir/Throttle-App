@@ -2,12 +2,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5 row justify-content-center form-group">
-                <h3 class="sub-heading">Login</h3>
-                <h3>{{displayMessage}}</h3>
-                <label for="email">Email:
+                <h3 class="sub-heading col-12">Login</h3>
+                <div class="alert alert-danger col-9" *ngIf="divIsVisible" role="alert">
+                    {{displayMessage}}
+                </div>
+                <label class="sub-heading" for="email">Email:
                     <input type="email" class="form-control" name="email" placeholder="Email"
                         [(ngModel)]="user.email"></label>
-                <label for="password">Password:
+                <label class="sub-heading" for="password">Password:
                     <input type="password" class="form-control" name="password" placeholder="Password"
                         [(ngModel)]="user.password"></label>
                 <button class="btn btn-primary sub-heading" type="submit">Login</button>

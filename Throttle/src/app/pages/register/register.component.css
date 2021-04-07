@@ -11,10 +11,23 @@ label {
 }
 
 button {
-    width: 6rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .container {
     margin-top: 3rem;
+}
+
+.sub-heading {
+    margin-top: 0.75rem;
+}
+
+label {
+    font-weight: 400;
+}
+
+label input{
+    font-weight: 300;
 }
