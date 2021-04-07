@@ -9,23 +9,23 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   adduser(data: any) {
-    return this.http.post<any>('http://localhost:7000/users/adduser/', { "user": data });
+    return this.http.post<any>('https://throttle-app-backend.herokuapp.com/users/adduser/', { "user": data });
   };
 
   loginvalidate(data: any) {
-    return this.http.post<any>('http://localhost:7000/users/loginvalidate/', { "user": data });
+    return this.http.post<any>('https://throttle-app-backend.herokuapp.com/users/loginvalidate/', { "user": data });
   }
 
   getuser(id) {
-    return this.http.post<any>('http://localhost:7000/users/getuser/', { "id": id });
+    return this.http.post<any>('https://throttle-app-backend.herokuapp.com/users/getuser/', { "id": id });
   }
 
   getusers() {
-    return this.http.post<any>('http://localhost:7000/users/getusers/', { "get": "get" });
+    return this.http.post<any>('https://throttle-app-backend.herokuapp.com/users/getusers/', { "get": "get" });
   }
 
   updaterole(data) {
-    return this.http.post<any>('http://localhost:7000/users/updaterole/', { "user": data });
+    return this.http.post<any>('https://throttle-app-backend.herokuapp.com/users/updaterole/', { "user": data });
   }
 
   loggedIn() {

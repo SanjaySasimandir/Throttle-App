@@ -1,29 +1,32 @@
 <div class="container">
     <form (ngSubmit)="submit()">
         <div class="row justify-content-center">
-            <div class="col-md-5 row justify-content-center">
-                <p class="sub-heading"><b>Mode of Delivery: </b>{{order.deliverymode}}</p>
-                <p class="sub-heading"><b>Current status of order is:</b> {{order.status}}</p>
-                <hr>
+            <div class="col-md-4 row justify-content-center">
+                <p class="sub-heading col-12"><b>Mode of Delivery: </b>{{order.deliverymode}}</p>
+                <p class="sub-heading col-12"><b>Current status of order is:</b> {{order.status}}</p>
+                <hr class="col-12">
 
-                <p class="sub-heading"><b>Select new status of order:</b></p>
-                <div><label class="sub-heading" for="status1"><input type="radio" id="status1" name="Status"
-                            [(ngModel)]="newstatus" value="Processing"> Processing</label><br></div>
-                <div><label class="sub-heading" for="status2"><input type="radio" id="status2" name="Status"
-                            [(ngModel)]="newstatus" value="Processed"> Processed</label><br></div>
-                <div *ngIf="order.deliverymode!='Pick Up By Self'"><label class="sub-heading" for="status3"><input
-                            id="status3" type="radio" name="Status" [(ngModel)]="newstatus"
-                            value="Ready to be Delivered">
-                        Ready to be Delivered</label><br>
+                <div class="col-12">
+                    <p class="sub-heading"><b>Select new status of order:</b></p>
+                    <div><label class="sub-heading" for="status1"><input type="radio" id="status1" name="Status"
+                                [(ngModel)]="newstatus" value="Processing"> Processing</label><br></div>
+                    <div><label class="sub-heading" for="status2"><input type="radio" id="status2" name="Status"
+                                [(ngModel)]="newstatus" value="Processed"> Processed</label><br></div>
+                    <div *ngIf="order.deliverymode!='Pick Up By Self'"><label class="sub-heading" for="status3"><input
+                                id="status3" type="radio" name="Status" [(ngModel)]="newstatus"
+                                value="Ready to be Delivered">
+                            Ready to be Delivered</label><br>
+                    </div>
+                    <div *ngIf="order.deliverymode=='Pick Up By Self'"><label class="sub-heading" for="status4"><input
+                                id="status4" type="radio" name="Status" [(ngModel)]="newstatus"
+                                value="Ready to get Picked Up">
+                            Ready to get Picked Up</label><br>
+                    </div>
+                    <div><label class="sub-heading" for="status5"><input id="status5" type="radio" name="Status"
+                                [(ngModel)]="newstatus" value="Completed"> Completed</label><br></div>
                 </div>
-                <div *ngIf="order.deliverymode=='Pick Up By Self'"><label class="sub-heading" for="status4"><input
-                            id="status4" type="radio" name="Status" [(ngModel)]="newstatus"
-                            value="Ready to get Picked Up">
-                        Ready to get Picked Up</label><br>
-                </div>
-                <div><label class="sub-heading" for="status5"><input id="status5" type="radio" name="Status"
-                            [(ngModel)]="newstatus" value="Completed"> Completed</label><br></div>
-                <div class="col-md-3">
+
+                <div class="col-12 row justify-content-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>

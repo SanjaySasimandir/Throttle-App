@@ -6,10 +6,10 @@
                 <div class="alert alert-danger col-9" *ngIf="divIsVisible" role="alert">
                     {{displayMessage}}
                 </div>
-                <label class="sub-heading" for="email">Email:
+                <label class="sub-heading col-10" for="email">Email:
                     <input type="email" class="form-control" name="email" placeholder="Email"
                         [(ngModel)]="user.email"></label>
-                <label class="sub-heading" for="password">Password:
+                <label class="sub-heading col-10" for="password">Password:
                     <input type="password" class="form-control" name="password" placeholder="Password"
                         [(ngModel)]="user.password"></label>
                 <button class="btn btn-primary sub-heading" type="submit">Login</button>

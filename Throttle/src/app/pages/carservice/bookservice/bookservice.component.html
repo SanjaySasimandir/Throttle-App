@@ -4,20 +4,21 @@
             <h2 class="sub-heading text-center">Book Car Service</h2>
             <form (ngSubmit)="submit()">
                 <div class="row form-group justify-content-center">
-                    <label class="sub-heading" for="carmake"><b>Car Make:</b><input type="text" class="form-control"
+
+                    <label class="sub-heading col-md-6" for="carmake"><b>Car Make:</b><input type="text" class="form-control"
                             name="carmake" required placeholder="Car Make" [(ngModel)]="booking.carmake"></label>
 
-                    <label class="sub-heading" for="caryear"><b>Car Year:</b><input type="year" class="form-control"
-                            name="caryear" required placeholder="Car Year" [(ngModel)]="booking.caryear"></label>
-
-                    <label class="sub-heading" for="carmodel"><b>Car Model:</b><input type="text" class="form-control"
+                    <label class="sub-heading col-md-6" for="carmodel"><b>Car Model:</b><input type="text" class="form-control"
                             name="carmodel" required placeholder="Car Model" [(ngModel)]="booking.carmodel"></label>
 
-                    <label class="sub-heading" for="deliverydate"><b>Deliver for service on:</b><input
+                    <label class="sub-heading col-md-6" for="caryear"><b>Car Year:</b><input type="year" class="form-control"
+                            name="caryear" required placeholder="Car Year" [(ngModel)]="booking.caryear"></label>
+
+                    <label class="sub-heading col-md-6" for="deliverydate"><b>Deliver for service on:</b><input
                             class="form-control" type="date" name="deliverydate" placeholder="Delivery date"
                             [(ngModel)]="booking.pickupdate" min="{{current_date}}" required></label>
 
-                    <label class="sub-heading" for="pickupmode"><b>Delivery mode for service:</b>
+                    <label class="sub-heading col-md-6" for="pickupmode"><b>Delivery mode for service:</b>
                         <select class="form-control" name="pickupmode" id="pickupmode" [(ngModel)]="booking.pickupmode">
                             <option class="sub-heading" value="I will drop the car off myself">I will drop the car off
                                 myself</option>
@@ -25,7 +26,7 @@
                                 car from my residential address</option>
                         </select></label>
 
-                    <label class="sub-heading" for="deliverymode"><b>Delivery mode after service:</b>
+                    <label class="sub-heading col-md-6" for="deliverymode"><b>Delivery mode after service:</b>
                         <select class="form-control" name="deliverymode" id="deliverymode"
                             [(ngModel)]="booking.deliverymode">
                             <option class="sub-heading" value="I will collect the car myself">I will collect the car
@@ -36,7 +37,7 @@
                         </select></label>
 
 
-                    <label class="sub-heading" for="repairslist"><b>Maintenace List:</b><textarea class="form-control"
+                    <label class="sub-heading col-12" for="repairslist"><b>Maintenace List:</b><textarea class="form-control"
                             name="repairslist" id="repairslist" cols="30" rows="5" placeholder="Maintenace List"
                             required [(ngModel)]="booking.repairslist"></textarea></label>
 

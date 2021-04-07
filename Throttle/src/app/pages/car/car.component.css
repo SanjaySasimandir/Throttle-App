@@ -1,6 +1,6 @@
 * {}
 
-.heading{
+.heading {
     text-shadow: 2px 2px 50px #000000;
 }
 
@@ -35,7 +35,13 @@ img {
 .card-style {
     position: absolute;
     bottom: 0;
-    margin-bottom: 0.75rem;
+    margin-left: 1rem;
+}
+
+.card-style h1 {
+    margin: 0;
+    bottom: 0;
+    padding: 0;
 }
 
 .info {
