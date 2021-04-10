@@ -2,7 +2,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="row col-md-9 justify-content-center">
             <h2 class="sub-heading text-center">Add Car</h2>
-            <form (ngSubmit)="submit()">
+            <form (ngSubmit)="submit()" #addcar="ngForm">
                 <div class="row form-group justify-content-center">
                     <label class="sub-heading col-md-6" for="model">Model:<input type="text" class="form-control" name="model" required
                             placeholder="Model" [(ngModel)]="newCar.model"></label>
@@ -21,7 +21,7 @@
                     <label class="sub-heading col-12" for="description">Description:<textarea class="form-control" name="description" cols="30"
                             rows="5" placeholder="Description" required [(ngModel)]="newCar.description"></textarea></label>
 
-                    <button class="btn btn-primary content-text" type="submit">Add Car</button>
+                    <button class="btn btn-primary content-text" [disabled]="addcar.form.invalid" type="submit">Add Car</button>
                 </div>
             </form>
         </div>
